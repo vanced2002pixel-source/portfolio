@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranjeet Prajapati | Java Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<script>
+tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif'],serif:['Newsreader','serif'],mono:['ui-monospace','SFMono-Regular','Menlo','Monaco','Consolas','monospace']}}}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.15) #030303}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#030303}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.15);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,0.25)}
+html{scroll-behavior:smooth}
+body{background:#030303;color:rgba(255,255,255,0.5);font-family:'Inter',sans-serif;font-weight:300;line-height:1.625;overflow-x:hidden}
+
+/* Text hierarchy */
+.text-l1{color:#ffffff}
+.text-l2{color:rgba(255,255,255,0.7)}
+.text-l3{color:rgba(255,255,255,0.5)}
+.text-l4{color:rgba(255,255,255,0.4)}
+.text-l5{color:rgba(255,255,255,0.3)}
+.text-accent{color:#38BDF8}
+.text-accent2{color:#F89820}
+.text-success{color:#4ade80}
+
+/* Headlines */
+h1,h2{font-family:'Newsreader',serif;font-style:italic;font-weight:400;line-height:1.1;letter-spacing:-0.02em}
+h3{font-family:'Inter',sans-serif;font-weight:600;font-size:1.25rem;color:#ffffff}
+.section-label{font-family:'ui-monospace','SFMono-Regular',Menlo,Monaco,Consolas,monospace;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.2em;color:rgba(56,189,248,0.7)}
+
+/* Glass Nav */
+.nav-glass{background:linear-gradient(to bottom right,rgba(255,255,255,0.1),rgba(255,255,255,0));backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.1);box-shadow:0 2.8px 2.2px rgba(0,0,0,0.034),0 6.7px 5.3px rgba(0,0,0,0.048),0 12.5px 10px rgba(0,0,0,0.06),0 22.3px 17.9px rgba(0,0,0,0.072),0 41.8px 33.4px rgba(0,0,0,0.086),0 100px 80px rgba(0,0,0,0.12)}
+.nav-glass.scrolled{background:rgba(3,3,3,0.9)}
+
+/* Glass secondary button */
+.btn-glass{background:rgba(255,255,255,0.05);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.15);border-radius:9999px;transition:all 0.3s}
+.btn-glass:hover{border-color:rgba(56,189,248,0.5);box-shadow:0 0 20px rgba(56,189,248,0.1)}
+
+/* Card base */
+.card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:1.5rem;transition:all 0.5s cubic-bezier(0.16,1,0.3,1)}
+
+/* Card spotlight */
+.card-spotlight{position:relative;overflow:hidden}
+.card-spotlight::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(600px circle at var(--mouse-x,50%) var(--mouse-y,50%),rgba(255,255,255,0.06),transparent 40%);pointer-events:none;opacity:0;transition:opacity 0.5s;z-index:1}
+.card-spotlight:hover::before{opacity:1}
+
+/* Card hover states */
+.card-spotlight:hover{border-color:rgba(56,189,248,0.3);background:rgba(255,255,255,0.04);transform:translateY(-4px);box-shadow:0 0 30px rgba(56,189,248,0.05)}
+.card-exp:hover{border-color:rgba(56,189,248,0.25);background:rgba(255,255,255,0.04)}
+.card-cert:hover{border-color:rgba(248,152,32,0.4);background:rgba(248,152,32,0.05);transform:translateY(-2px)}
+.card-stat:hover{border-color:rgba(56,189,248,0.3);background:rgba(56,189,248,0.05)}
+
+/* Skill tag */
+.skill-tag{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:9999px;padding:6px 14px;font-family:'ui-monospace','SFMono-Regular',Menlo,Monaco,Consolas,monospace;font-size:0.75rem;color:rgba(255,255,255,0.6);transition:all 0.3s;cursor:default}
+.skill-tag:hover{border-color:rgba(56,189,248,0.5);background:rgba(56,189,248,0.1);transform:translateY(-2px);box-shadow:0 0 15px rgba(56,189,248,0.15);color:rgba(255,255,255,0.9)}
+
+/* Tech tag (smaller) */
+.tech-tag{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:9999px;padding:3px 10px;font-family:'ui-monospace','SFMono-Regular',Menlo,Monaco,Consolas,monospace;font-size:0.65rem;color:rgba(255,255,255,0.4);white-space:nowrap}
+
+/* Spinning border button */
+@property --gradient-angle{syntax:"<angle>";initial-value:0deg;inherits:false}
+.btn-primary{position:relative;border-radius:9999px;overflow:hidden;isolation:isolate;z-index:0;padding:14px 32px;font-family:'Inter',sans-serif;font-weight:500;font-size:0.875rem;cursor:pointer;border:none;color:#030303;background:transparent;display:inline-flex;align-items:center;gap:8px;transition:color 0.3s}
+.btn-primary::before{content:'';position:absolute;inset:-2px;background:conic-gradient(from var(--gradient-angle),transparent 0%,#0ea5e9 5%,#38BDF8 15%,#0ea5e9 30%,transparent 40%);animation:border-spin 2.5s linear infinite;border-radius:9999px;z-index:-2}
+.btn-primary::after{content:'';position:absolute;inset:2px;background:#030303;border-radius:9999px;z-index:-1;transition:background 0.3s}
+.btn-primary:hover::after{background:#38BDF8}
+.btn-primary:hover{color:#030303}
+
+/* Nav link underline */
+.nav-link{position:relative;color:rgba(255,255,255,0.5);transition:color 0.3s}
+.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:#38BDF8;transition:width 0.3s}
+.nav-link:hover,.nav-link.active{color:#ffffff}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+
+/* Gradient text */
+.gradient-text{background:linear-gradient(90deg,#38BDF8,#F89820,#38BDF8);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient-shift 4s ease infinite}
+
+/* Text glow */
+.text-glow{text-shadow:0 0 25px rgba(56,189,248,0.4)}
+
+/* Dot grid background */
+.dot-grid{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(to right,rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:100px 200px;mask-image:radial-gradient(circle at center,black 40%,transparent 100%);-webkit-mask-image:radial-gradient(circle at center,black 40%,transparent 100%)}
+
+/* Blur glows */
+.glow-1{position:fixed;top:-200px;left:-200px;width:800px;height:800px;background:radial-gradient(circle,rgba(56,189,248,0.05),transparent 70%);filter:blur(120px);pointer-events:none;z-index:0}
+.glow-2{position:fixed;bottom:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(248,152,32,0.05),transparent 70%);filter:blur(100px);pointer-events:none;z-index:0}
+
+/* Animations */
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+@keyframes beam{0%{stroke-dashoffset:1000}100%{stroke-dashoffset:0}}
+@keyframes spin-slow{to{transform:rotate(360deg)}}
+@keyframes spin-slow-reverse{to{transform:rotate(-360deg)}}
+@keyframes gradient-shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes border-spin{to{--gradient-angle:360deg}}
+@keyframes blink{50%{opacity:0}}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.4}}
+@keyframes scroll-hint{0%,100%{transform:translateY(0);opacity:0.5}50%{transform:translateY(8px);opacity:1}}
+
+.animate-float{animation:float 6s ease-in-out infinite}
+.animate-float-d1{animation:float 6s ease-in-out infinite;animation-delay:-1s}
+.animate-float-d2{animation:float 6s ease-in-out infinite;animation-delay:-2s}
+.animate-float-d3{animation:float 6s ease-in-out infinite;animation-delay:-3s}
+.animate-float-d4{animation:float 6s ease-in-out infinite;animation-delay:-4s}
+.animate-spin-slow{animation:spin-slow 12s linear infinite}
+.animate-spin-slow-reverse{animation:spin-slow-reverse 15s linear infinite}
+.animate-beam{animation:beam 3s linear infinite}
+.animate-marquee{animation:marquee 40s linear infinite}
+.animate-blink{animation:blink 1s step-end infinite}
+.animate-pulse-dot{animation:pulse-dot 1.5s cubic-bezier(0.4,0,0.6,1) infinite}
+.animate-scroll-hint{animation:scroll-hint 2s ease-in-out infinite}
+
+/* Marquee mask */
+.marquee-mask{mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent)}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
+.reveal.revealed{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:0.1s}
+.reveal-d2{transition-delay:0.2s}
+.reveal-d3{transition-delay:0.3s}
+.reveal-d4{transition-delay:0.4s}
+.reveal-d5{transition-delay:0.5s}
+
+/* Code block */
+.code-block{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:1rem;overflow:hidden;transition:border-color 0.3s}
+.code-block:hover{border-color:rgba(255,255,255,0.15)}
+.code-chrome{display:flex;align-items:center;gap:6px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.code-dot{width:10px;height:10px;border-radius:50%}
+.code-content{padding:16px;font-family:'ui-monospace','SFMono-Regular',Menlo,Monaco,Consolas,monospace;font-size:0.75rem;line-height:1.7;overflow-x:auto}
+.code-content .kw{color:#c792ea}
+.code-content .fn{color:#82aaff}
+.code-content .str{color:#c3e88d}
+.code-content .cls{color:#facc15}
+.code-content .ann{color:#ff5370}
+.code-content .cmt{color:rgba(255,255,255,0.25)}
+.code-content .var{color:#89ddff}
+.code-content .num{color:#f78c6c}
+
+/* Form */
+.form-input{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:0.75rem;padding:12px 16px;color:#ffffff;font-family:'Inter',sans-serif;font-weight:300;font-size:0.875rem;transition:border-color 0.3s;outline:none;width:100%}
+.form-input:focus{border-color:rgba(56,189,248,0.5)}
+.form-input::placeholder{color:rgba(255,255,255,0.3)}
+.form-input.error{border-color:#ef4444}
+.form-label{font-family:'ui-monospace','SFMono-Regular',Menlo,Monaco,Consolas,monospace;font-size:0.65rem;font-weight:500;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.4);margin-bottom:8px;display:block}
+
+/* Toast */
+.toast{position:fixed;bottom:24px;right:24px;z-index:70;background:rgba(74,222,128,0.1);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(74,222,128,0.3);border-radius:1rem;padding:16px 24px;display:flex;align-items:center;gap:12px;transform:translateY(100px);opacity:0;transition:all 0.5s cubic-bezier(0.16,1,0.3,1);pointer-events:none}
+.toast.show{transform:translateY(0);opacity:1;pointer-events:auto}
+
+/* Mobile menu */
+.mobile-menu{position:fixed;inset:0;z-index:60;background:rgba(3,3,3,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transform:translateX(100%);transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{font-family:'Newsreader',serif;font-style:italic;font-size:1.875rem;font-weight:400;color:rgba(255,255,255,0.5);transition:color 0.3s}
+.mobile-menu a:hover{color:#ffffff}
+
+/* Date pill */
+.date-pill{font-family:'ui-monospace','SFMono-Regular',Menlo,Monaco,Consolas,monospace;font-size:0.7rem;color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.08);border-radius:9999px;padding:4px 12px;white-space:nowrap}
+
+/* Content z-index */
+.content-z{position:relative;z-index:10}
+</style>
+</head>
+<body>
+
+<!-- Background Effects -->
+<div class="dot-grid"></div>
+<div class="glow-1"></div>
+<div class="glow-2"></div>
+
+<!-- Navigation -->
+<nav id="navbar" class="nav-glass fixed top-6 left-1/2 -translate-x-1/2 z-50 rounded-full px-4 sm:px-6 py-3 flex items-center gap-4 sm:gap-8 max-w-4xl w-[95%] sm:w-auto">
+  <a href="#hero" class="text-white font-medium text-sm whitespace-nowrap flex-shrink-0">Ranjeet<span class="text-accent">.</span></a>
+  <div class="hidden md:flex items-center gap-6 flex-1 justify-center">
+    <a href="#about" class="nav-link text-xs font-medium tracking-wide" data-section="about">About</a>
+    <a href="#experience" class="nav-link text-xs font-medium tracking-wide" data-section="experience">Experience</a>
+    <a href="#projects" class="nav-link text-xs font-medium tracking-wide" data-section="projects">Projects</a>
+    <a href="#skills" class="nav-link text-xs font-medium tracking-wide" data-section="skills">Skills</a>
+    <a href="#certifications" class="nav-link text-xs font-medium tracking-wide" data-section="certifications">Certifications</a>
+    <a href="#contact" class="nav-link text-xs font-medium tracking-wide" data-section="contact">Contact</a>
+  </div>
+  <a href="#contact" class="hidden md:inline-flex btn-primary text-xs py-2 px-5 flex-shrink-0">Let's Talk</a>
+  <button id="hamburger" class="md:hidden text-white p-1" aria-label="Open menu">
+    <span class="iconify" data-icon="mdi:menu" data-width="24"></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu">
+  <button id="mobileClose" class="absolute top-6 right-6 text-white p-2" aria-label="Close menu">
+    <span class="iconify" data-icon="mdi:close" data-width="28"></span>
+  </button>
+  <a href="#about" class="mobile-nav-link">About</a>
+  <a href="#experience" class="mobile-nav-link">Experience</a>
+  <a href="#projects" class="mobile-nav-link">Projects</a>
+  <a href="#skills" class="mobile-nav-link">Skills</a>
+  <a href="#certifications" class="mobile-nav-link">Certifications</a>
+  <a href="#code" class="mobile-nav-link">Code</a>
+  <a href="#contact" class="mobile-nav-link">Contact</a>
+</div>
+
+<!-- Hero Section -->
+<section id="hero" class="min-h-[1100px] flex items-center content-z">
+  <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-32">
+    <!-- Left Column -->
+    <div>
+      <div class="reveal flex items-center gap-2 mb-8">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse-dot"></span>
+        <span class="font-mono text-xs font-medium uppercase tracking-widest text-l4">Open to Opportunities</span>
+      </div>
+      <h1 class="reveal reveal-d1 text-l1" style="font-size:clamp(2.5rem,6vw,4.5rem)">
+        Ranjeet<br><span class="gradient-text">Prajapati</span>
+      </h1>
+      <p class="reveal reveal-d2 mt-6 text-l2 flex items-center gap-3 text-sm sm:text-base">
+        <span class="text-l5">—</span>
+        <span class="text-accent text-glow font-medium">Java Software Engineer</span>
+        <span class="text-l4">&</span>
+        <span class="text-accent2 font-medium" style="text-shadow:0 0 25px rgba(248,152,32,0.4)">Backend Developer</span>
+      </p>
+      <p class="reveal reveal-d3 mt-6 text-l3 max-w-lg text-sm sm:text-base">
+        I build scalable, production-grade backend systems with Java and Spring Boot. I've delivered full-stack healthcare and AI-powered applications that <span class="text-l1 font-medium">reduced manual scheduling by 100%</span> and <span class="text-l1 font-medium">cut email writing time by 70%</span> — turning complex requirements into reliable software.
+      </p>
+      <div class="reveal reveal-d4 flex flex-wrap gap-4 mt-10">
+        <a href="#contact" class="btn-primary">
+          Let's Talk
+          <span class="iconify" data-icon="mdi:arrow-right" data-width="18"></span>
+        </a>
+        <a href="#projects" class="btn-glass px-6 py-3 text-sm font-medium text-l2 inline-flex items-center gap-2">
+          <span class="iconify" data-icon="mdi:folder-outline" data-width="18"></span>
+          View Projects
+        </a>
+      </div>
+      <!-- Stat Cards -->
+      <div class="reveal reveal-d5 grid grid-cols-3 gap-4 mt-12 max-w-md">
+        <div class="card card-spotlight card-stat p-5 text-center">
+          <div class="text-2xl font-semibold text-l1 counter" data-target="1">0</div>
+          <div class="text-xs text-l4 mt-1 font-mono">Yrs Exp</div>
+        </div>
+        <div class="card card-spotlight card-stat p-5 text-center">
+          <div class="text-2xl font-semibold text-l1 counter" data-target="2">0</div>
+          <div class="text-xs text-l4 mt-1 font-mono">Projects</div>
+        </div>
+        <div class="card card-spotlight card-stat p-5 text-center">
+          <div class="text-2xl font-semibold text-l1"><span class="counter" data-target="15">0</span>+</div>
+          <div class="text-xs text-l4 mt-1 font-mono">APIs Built</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column — Decorative -->
+    <div class="hidden lg:flex items-center justify-center relative">
+      <div class="relative w-[420px] h-[420px]">
+        <!-- Outer spinning ring -->
+        <div class="absolute inset-0 animate-spin-slow">
+          <svg viewBox="0 0 420 420" class="w-full h-full">
+            <circle cx="210" cy="210" r="190" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <circle cx="210" cy="210" r="190" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="80 1000" class="animate-beam" opacity="0.5"/>
+            <circle cx="210" cy="210" r="190" fill="none" stroke="#F89820" stroke-width="1" stroke-dasharray="50 1000" class="animate-beam" opacity="0.3" style="animation-delay:-1.5s"/>
+          </svg>
+        </div>
+        <!-- Inner reverse ring -->
+        <div class="absolute inset-0 animate-spin-slow-reverse">
+          <svg viewBox="0 0 420 420" class="w-full h-full">
+            <circle cx="210" cy="210" r="130" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+            <circle cx="210" cy="210" r="130" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="60 1000" class="animate-beam" opacity="0.35"/>
+          </svg>
+        </div>
+        <!-- Sonar pings -->
+        <svg viewBox="0 0 420 420" class="absolute inset-0 w-full h-full">
+          <circle cx="210" cy="210" fill="none" stroke="#38BDF8">
+            <animate attributeName="r" from="10" to="80" dur="3s" begin="0s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" from="0.8" to="0" dur="3s" begin="0s" repeatCount="indefinite"/>
+            <animate attributeName="stroke-width" from="1" to="0" dur="3s" begin="0s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="210" cy="210" fill="none" stroke="#38BDF8">
+            <animate attributeName="r" from="10" to="80" dur="3s" begin="1s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" from="0.8" to="0" dur="3s" begin="1s" repeatCount="indefinite"/>
+            <animate attributeName="stroke-width" from="1" to="0" dur="3s" begin="1s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="210" cy="210" fill="none" stroke="#38BDF8">
+            <animate attributeName="r" from="10" to="80" dur="3s" begin="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" from="0.8" to="0" dur="3s" begin="2s" repeatCount="indefinite"/>
+            <animate attributeName="stroke-width" from="1" to="0" dur="3s" begin="2s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <!-- Code block -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[270px] code-block">
+          <div class="code-chrome">
+            <span class="code-dot" style="background:#ff5f57"></span>
+            <span class="code-dot" style="background:#febc2e"></span>
+            <span class="code-dot" style="background:#28c840"></span>
+            <span class="text-l5 text-xs ml-2 font-mono">AppointmentController.java</span>
+          </div>
+    
