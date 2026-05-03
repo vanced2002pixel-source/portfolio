@@ -298,4 +298,810 @@ h3{font-family:'Inter',sans-serif;font-weight:600;font-size:1.25rem;color:#fffff
             <span class="code-dot" style="background:#28c840"></span>
             <span class="text-l5 text-xs ml-2 font-mono">AppointmentController.java</span>
           </div>
-    
+          <div class="code-content">
+            <span class="ann">@RestController</span><br>
+            <span class="ann">@RequestMapping</span>(<span class="str">"/api/v1"</span>)<br>
+            <span class="kw">public class</span> <span class="cls">AppointmentController</span> {<br>
+            &nbsp;&nbsp;<span class="ann">@Autowired</span><br>
+            &nbsp;&nbsp;<span class="kw">private</span> <span class="cls">AppointmentService</span> service;<br><br>
+            &nbsp;&nbsp;<span class="ann">@PostMapping</span>(<span class="str">"/appointments"</span>)<br>
+            &nbsp;&nbsp;<span class="kw">public</span> <span class="cls">ResponseEntity</span>&lt;?&gt; <span class="fn">create</span>(<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="ann">@Valid</span> <span class="ann">@RequestBody</span> <span class="cls">Dto</span> dto) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="cls">ResponseEntity</span>.<span class="fn">ok</span>(<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.<span class="fn">schedule</span>(dto)<span class="animate-blink">│</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;);<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </div>
+        </div>
+        <!-- Floating badges -->
+        <div class="absolute top-2 left-6 animate-float glass-badge px-3 py-1.5 rounded-full text-xs font-mono text-l4 border border-white/10 bg-white/5 backdrop-blur-md">Java</div>
+        <div class="absolute top-16 right-2 animate-float-d1 glass-badge px-3 py-1.5 rounded-full text-xs font-mono text-l4 border border-white/10 bg-white/5 backdrop-blur-md">Spring Boot</div>
+        <div class="absolute bottom-20 left-0 animate-float-d2 glass-badge px-3 py-1.5 rounded-full text-xs font-mono text-l4 border border-white/10 bg-white/5 backdrop-blur-md">MySQL</div>
+        <div class="absolute bottom-4 right-8 animate-float-d3 glass-badge px-3 py-1.5 rounded-full text-xs font-mono text-l4 border border-white/10 bg-white/5 backdrop-blur-md">React</div>
+        <div class="absolute top-1/2 -right-4 animate-float-d4 glass-badge px-3 py-1.5 rounded-full text-xs font-mono text-l4 border border-white/10 bg-white/5 backdrop-blur-md">Hibernate</div>
+      </div>
+    </div>
+  </div>
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+    <span class="font-mono text-xs text-l5 tracking-widest uppercase">Scroll</span>
+    <span class="iconify text-l4 animate-scroll-hint" data-icon="mdi:chevron-down" data-width="20"></span>
+  </div>
+</section>
+
+<!-- Tech Marquee -->
+<section class="border-y border-white/5 py-4 overflow-hidden content-z">
+  <div class="flex animate-marquee marquee-mask whitespace-nowrap">
+    <span class="font-mono text-xs text-l5 mx-4">Java</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Spring Boot</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Spring MVC</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Spring Security</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Hibernate</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">MySQL</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Spring Data JPA</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">REST API</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">React</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">JavaScript</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">HTML</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">CSS</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Thymeleaf</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Git</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">GitHub</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Maven</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Postman</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">IntelliJ IDEA</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">JWT</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">RBAC</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Java Servlets</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Java EE</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">SQL</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">DSA</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Multithreading</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">OOP Design Patterns</span>
+    <span class="text-l5 mx-2">◆</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="font-mono text-xs text-l5 mx-4">Java</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Spring Boot</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Spring MVC</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Spring Security</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Hibernate</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">MySQL</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Spring Data JPA</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">REST API</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">React</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">JavaScript</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">HTML</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">CSS</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Thymeleaf</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Git</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">GitHub</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Maven</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Postman</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">IntelliJ IDEA</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">JWT</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">RBAC</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Java Servlets</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Java EE</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">SQL</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">DSA</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">Multithreading</span>
+    <span class="text-l5 mx-2">◆</span>
+    <span class="font-mono text-xs text-l5 mx-4">OOP Design Patterns</span>
+    <span class="text-l5 mx-2">◆</span>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-32 content-z">
+  <div class="max-w-7xl mx-auto px-6">
+    <span class="section-label reveal">01 — About Me</span>
+    <h2 class="reveal reveal-d1 mt-4 text-l1" style="font-size:clamp(2rem,5vw,3.75rem)">
+      Building backend systems<br><span class="text-l4">that scale with confidence</span>
+    </h2>
+    <div class="grid lg:grid-cols-2 gap-12 mt-14">
+      <div class="space-y-6">
+        <p class="reveal reveal-d2 text-l3 text-sm sm:text-base">
+          Java Software Engineer and Backend Developer with hands-on experience in <span class="text-l2">software engineering, software design, and software architecture</span> for scalable, production-grade web applications.
+        </p>
+        <p class="reveal reveal-d3 text-l3 text-sm sm:text-base">
+          Proficient in <span class="text-l2">Java, Spring Boot, Spring Security, and RESTful API development</span>, with a strong background in debugging software, software troubleshooting, and product development across full-stack Java projects.
+        </p>
+        <p class="reveal reveal-d4 text-l3 text-sm sm:text-base">
+          Experienced in building user-facing interfaces with React and Thymeleaf alongside robust backend services. Skilled in <span class="text-l2">relational database design using MySQL, Hibernate ORM, and Spring Data JPA</span>, and well-versed in Multithreading, Java Servlets, Data Structures & Algorithms, and OOP design patterns.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="reveal reveal-d2 card card-spotlight card-stat p-6 flex flex-col items-center text-center">
+          <span class="iconify text-accent mb-3" data-icon="mdi:folder-multiple-outline" data-width="28"></span>
+          <div class="text-2xl font-semibold text-l1">2</div>
+          <div class="text-xs text-l4 mt-1">Projects Delivered</div>
+        </div>
+        <div class="reveal reveal-d3 card card-spotlight card-stat p-6 flex flex-col items-center text-center">
+          <span class="iconify text-accent2 mb-3" data-icon="mdi:api" data-width="28"></span>
+          <div class="text-2xl font-semibold text-l1">15+</div>
+          <div class="text-xs text-l4 mt-1">APIs Built</div>
+        </div>
+        <div class="reveal reveal-d4 card card-spotlight card-stat p-6 flex flex-col items-center text-center">
+          <span class="iconify text-green-400 mb-3" data-icon="mdi:bug-check-outline" data-width="28"></span>
+          <div class="text-2xl font-semibold text-l1">15+</div>
+          <div class="text-xs text-l4 mt-1">Bugs Resolved</div>
+        </div>
+        <div class="reveal reveal-d5 card card-spotlight card-stat p-6 flex flex-col items-center text-center">
+          <span class="iconify text-yellow-400 mb-3" data-icon="mdi:school-outline" data-width="28"></span>
+          <div class="text-2xl font-semibold text-l1">8.79</div>
+          <div class="text-xs text-l4 mt-1">CGPA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="py-32 content-z">
+  <div class="max-w-7xl mx-auto px-6">
+    <span class="section-label reveal">02 — Experience</span>
+    <h2 class="reveal reveal-d1 mt-4 text-l1" style="font-size:clamp(2rem,5vw,3.75rem)">
+      Engineering real-world<br><span class="text-l4">backend solutions</span>
+    </h2>
+    <div class="mt-14 space-y-6">
+      <!-- Experience Card 1 -->
+      <div class="reveal reveal-d2 card card-spotlight card-exp p-8 sm:p-10">
+        <div class="flex flex-wrap items-start justify-between gap-3 mb-6">
+          <div>
+            <h3 class="text-l1">Java Backend Developer <span class="text-l4 font-normal text-sm">(Project)</span></h3>
+            <p class="text-accent text-sm mt-1">MyDoctorApp — Healthcare Management Platform</p>
+          </div>
+          <span class="date-pill">Jan 2024 – Present</span>
+        </div>
+        <div class="space-y-3 mb-6">
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Constructed a full-stack healthcare platform enabling patients to search doctors, book appointments, and attend real-time video consultations — reducing manual scheduling effort by <span class="text-l2 font-medium">100%</span> and improving appointment throughput.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Implemented Role-Based Access Control (RBAC) and secure user authentication using Spring Security, enforcing strict data access boundaries between Patient and Doctor roles and protecting sensitive health data.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Built and documented <span class="text-l2 font-medium">10+</span> RESTful API endpoints in Spring Boot covering appointment scheduling, doctor availability management, and user profile operations — following REST best practices and clean software design principles.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Modeled a normalized MySQL relational schema using Spring Data JPA and Hibernate, improving data integrity across <span class="text-l2 font-medium">3+</span> core entities (users, appointments, doctor records) and eliminating redundant data storage.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Integrated Java Mail API for automated transactional email notifications, reducing appointment confirmation response time by an estimated <span class="text-l2 font-medium">80%</span> and eliminating manual communication overhead.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Applied layered MVC software architecture to separate the REST API layer, business logic, and data access layer — improving long-term maintainability and enabling independent component testing.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Performed thorough debugging and software troubleshooting to resolve <span class="text-l2 font-medium">15+</span> backend defects related to session handling, JPA query performance, and API response formatting — boosting overall system stability.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Created system flowcharts and UML diagrams to document software architecture, data flow, and API interactions for product development reference and future onboarding.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag">Java</span>
+          <span class="tech-tag">Spring Boot</span>
+          <span class="tech-tag">Spring Security</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">Spring Data JPA</span>
+          <span class="tech-tag">Hibernate</span>
+          <span class="tech-tag">Java Mail API</span>
+          <span class="tech-tag">Zego Video SDK</span>
+        </div>
+      </div>
+
+      <!-- Experience Card 2 -->
+      <div class="reveal reveal-d3 card card-spotlight card-exp p-8 sm:p-10">
+        <div class="flex flex-wrap items-start justify-between gap-3 mb-6">
+          <div>
+            <h3 class="text-l1">Java Backend Developer <span class="text-l4 font-normal text-sm">(Project)</span></h3>
+            <p class="text-accent2 text-sm mt-1">Email Writer — AI-Powered Email Generation Tool</p>
+          </div>
+          <span class="date-pill">Aug 2024 – Dec 2024</span>
+        </div>
+        <div class="space-y-3 mb-6">
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent2 mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Developed an AI-powered email generation tool that converts natural language prompts into polished professional email drafts — reducing user email writing time by approximately <span class="text-l2 font-medium">70%</span>.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent2 mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Created <span class="text-l2 font-medium">5+</span> backend REST APIs in Spring Boot to handle prompt processing, AI API orchestration, and structured email response delivery — applying robust error handling and input validation throughout.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent2 mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Architected a modular three-tier software structure decoupling the React frontend, Spring Boot backend service, and browser extension for independent deployment and simplified maintenance.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent2 mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Produced a React and JavaScript-based user interface with real-time draft preview and copy-to-clipboard functionality — delivering an intuitive user-facing experience that improved productivity for end users.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent2 mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Constructed a browser extension enabling one-click email generation directly from any browser tab, expanding product accessibility to non-technical users and increasing overall tool adoption.
+          </p>
+          <p class="text-l3 text-sm flex items-start gap-2">
+            <span class="iconify text-accent2 mt-1 flex-shrink-0" data-icon="mdi:chevron-right" data-width="16"></span>
+            Conducted end-to-end debugging and software troubleshooting across the full stack — resolving API latency issues, cross-origin request errors, and browser extension compatibility defects.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag">Java</span>
+          <span class="tech-tag">Spring Boot</span>
+          <span class="tech-tag">REST API</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">AI API Integration</span>
+          <span class="tech-tag">Browser Extension</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-32 content-z">
+  <div class="max-w-7xl mx-auto px-6">
+    <span class="section-label reveal">03 — Featured Projects</span>
+    <h2 class="reveal reveal-d1 mt-4 text-l1" style="font-size:clamp(2rem,5vw,3.75rem)">
+      From concept to<br><span class="text-l4">production-grade code</span>
+    </h2>
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      <!-- Project 1 -->
+      <div class="reveal reveal-d2 card card-spotlight overflow-hidden group">
+        <div class="relative h-52 overflow-hidden">
+          <img src="https://picsum.photos/seed/healthcare-platform-doctor/800/500" alt="MyDoctorApp" class="w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-500 group-hover:scale-105 transition-transform">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent"></div>
+          <span class="absolute top-4 left-4 text-xs font-mono font-medium uppercase tracking-wider px-3 py-1 rounded-full bg-accent2/20 text-accent2 border border-accent2/30">Production</span>
+        </div>
+        <div class="p-8">
+          <h3 class="text-l1 text-lg">MyDoctorApp</h3>
+          <p class="text-l3 text-sm mt-2 leading-relaxed">Full-stack healthcare platform enabling patients to search doctors, book appointments, and attend real-time video consultations with RBAC-secured backend.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">Spring Security</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Zego Video SDK</span>
+          </div>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="text-l4 hover:text-accent text-sm flex items-center gap-1.5 transition-colors">
+              <span class="iconify" data-icon="mdi:github" data-width="16"></span> Source Code
+            </a>
+            <a href="#" class="text-l4 hover:text-accent text-sm flex items-center gap-1.5 transition-colors">
+              <span class="iconify" data-icon="mdi:open-in-new" data-width="16"></span> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="reveal reveal-d3 card card-spotlight overflow-hidden group">
+        <div class="relative h-52 overflow-hidden">
+          <img src="https://picsum.photos/seed/ai-email-technology-tool/800/500" alt="Email Writer" class="w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-500 group-hover:scale-105 transition-transform">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent"></div>
+          <span class="absolute top-4 left-4 text-xs font-mono font-medium uppercase tracking-wider px-3 py-1 rounded-full bg-green-500/20 text-green-400 border border-green-500/30">Open Source</span>
+        </div>
+        <div class="p-8">
+          <h3 class="text-l1 text-lg">Email Writer</h3>
+          <p class="text-l3 text-sm mt-2 leading-relaxed">AI-powered email generation tool converting natural language prompts into polished professional email drafts with a browser extension for one-click generation.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">AI API</span>
+          </div>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="text-l4 hover:text-accent text-sm flex items-center gap-1.5 transition-colors">
+              <span class="iconify" data-icon="mdi:github" data-width="16"></span> Source Code
+            </a>
+            <a href="#" class="text-l4 hover:text-accent text-sm flex items-center gap-1.5 transition-colors">
+              <span class="iconify" data-icon="mdi:open-in-new" data-width="16"></span> Case Study
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-32 content-z">
+  <div class="max-w-7xl mx-auto px-6">
+    <span class="section-label reveal">04 — Technical Arsenal</span>
+    <h2 class="reveal reveal-d1 mt-4 text-l1" style="font-size:clamp(2rem,5vw,3.75rem)">
+      Tools & technologies<br><span class="text-l4">I work with daily</span>
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+      <!-- Category 1 -->
+      <div class="reveal reveal-d1 card p-8">
+        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
+          <span class="iconify text-accent" data-icon="mdi:language-java" data-width="22"></span>
+        </div>
+        <h3 class="text-l1 text-base mb-4">Core Java</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-tag">Core Java</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">Collections</span>
+          <span class="skill-tag">Exception Handling</span>
+          <span class="skill-tag">Multithreading</span>
+          <span class="skill-tag">Servlets</span>
+          <span class="skill-tag">Java EE</span>
+        </div>
+      </div>
+      <!-- Category 2 -->
+      <div class="reveal reveal-d2 card p-8">
+        <div class="w-10 h-10 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center mb-5">
+          <span class="iconify text-green-400" data-icon="mdi:leaf" data-width="22"></span>
+        </div>
+        <h3 class="text-l1 text-base mb-4">Spring Ecosystem</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-tag">Spring Boot</span>
+          <span class="skill-tag">Spring MVC</span>
+          <span class="skill-tag">Spring Security</span>
+          <span class="skill-tag">Spring Data JPA</span>
+          <span class="skill-tag">Hibernate</span>
+          <span class="skill-tag">REST API</span>
+        </div>
+      </div>
+      <!-- Category 3 -->
+      <div class="reveal reveal-d3 card p-8">
+        <div class="w-10 h-10 rounded-xl bg-accent2/10 border border-accent2/20 flex items-center justify-center mb-5">
+          <span class="iconify text-accent2" data-icon="mdi:database" data-width="22"></span>
+        </div>
+        <h3 class="text-l1 text-base mb-4">Database & SQL</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Hibernate ORM</span>
+          <span class="skill-tag">Database Design</span>
+          <span class="skill-tag">Normalization</span>
+          <span class="skill-tag">RDBMS</span>
+        </div>
+      </div>
+      <!-- Category 4 -->
+      <div class="reveal reveal-d2 card p-8">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-5">
+          <span class="iconify text-cyan-400" data-icon="mdi:palette-outline" data-width="22"></span>
+        </div>
+        <h3 class="text-l1 text-base mb-4">Frontend & UI</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">Thymeleaf</span>
+        </div>
+      </div>
+      <!-- Category 5 -->
+      <div class="reveal reveal-d3 card p-8">
+        <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-5">
+          <span class="iconify text-purple-400" data-icon="mdi:sitemap-outline" data-width="22"></span>
+        </div>
+        <h3 class="text-l1 text-base mb-4">Architecture & Patterns</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-tag">MVC Architecture</span>
+          <span class="skill-tag">Layered Architecture</span>
+          <span class="skill-tag">RBAC</span>
+          <span class="skill-tag">JWT</span>
+          <span class="skill-tag">OOP Design Patterns</span>
+          <span class="skill-tag">API Integration</span>
+        </div>
+      </div>
+      <!-- Category 6 -->
+      <div class="reveal reveal-d4 card p-8">
+        <div class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center mb-5">
+          <span class="iconify text-rose-400" data-icon="mdi:wrench-outline" data-width="22"></span>
+        </div>
+        <h3 class="text-l1 text-base mb-4">Tools & Practices</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">Maven</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">IntelliJ IDEA</span>
+          <span class="skill-tag">DSA</span>
+          <span class="skill-tag">UML Diagrams</span>
+          <span class="skill-tag">Flowcharts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications & Education Section -->
+<section id="certifications" class="py-32 content-z">
+  <div class="max-w-7xl mx-auto px-6">
+    <span class="section-label reveal">05 — Certifications & Education</span>
+    <h2 class="reveal reveal-d1 mt-4 text-l1" style="font-size:clamp(2rem,5vw,3.75rem)">
+      Credentials &<br><span class="text-l4">academic foundation</span>
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+      <!-- Certification -->
+      <div class="reveal reveal-d2 card card-spotlight card-cert p-8">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-5">
+          <span class="iconify text-amber-400" data-icon="mdi:certificate" data-width="22"></span>
+        </div>
+        <h3 class="text-l1 text-base">Java Backend Development Bootcamp</h3>
+        <p class="text-accent2 text-sm mt-1">GeeksforGeeks</p>
+        <p class="font-mono text-xs text-l4 mt-3">April 2026</p>
+        <p class="text-l4 text-xs mt-3">Credential ID: 90907ad8910628c698649c63d2f81733</p>
+        <a href="#" class="text-accent text-xs mt-3 inline-flex items-center gap-1 hover:underline">
+          Verify Certificate <span class="iconify" data-icon="mdi:arrow-right" data-width="14"></span>
+        </a>
+      </div>
+      <!-- Education -->
+      <div class="reveal reveal-d3 card card-spotlight card-cert p-8">
+        <div class="w-10 h-10 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center mb-5">
+          <span class="iconify text-green-400" data-icon="mdi:school-outline" data-width="22"></span>
+        </div>
+        <h3 class="text-l1 text-base">B.Tech in Computer Science & Engineering</h3>
+        <p class="text-green-400 text-sm mt-1">Noida International University</p>
+        <p class="font-mono text-xs text-l4 mt-3">Aug 2023 – May 2027</p>
+        <p class="text-l4 text-xs mt-3">Specialization: Data Science · CGPA: <span class="text-l2">8.79 / 10.0</span></p>
+        <p class="text-l5 text-xs mt-2">Greater Noida, India</p>
+      </div>
+      <!-- Coursework -->
+      <div class="reveal reveal-d4 card card-spotlight card-cert p-8">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-5">
+          <span class="iconify text-cyan-400" data-icon="mdi:book-open-outline" data-width="22"></span>
+        </div>
+        <h3 class="text-l1 text-base">Relevant Coursework</h3>
+        <p class="text-cyan-400 text-sm mt-1">Core CS Subjects</p>
+        <div class="flex flex-wrap gap-1.5 mt-4">
+          <span class="tech-tag">OOP</span>
+          <span class="tech-tag">DSA</span>
+          <span class="tech-tag">DBMS</span>
+          <span class="tech-tag">Software Engineering</span>
+          <span class="tech-tag">Computer Networks</span>
+          <span class="tech-tag">CS Fundamentals</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Code Showcase Section -->
+<section id="code" class="py-32 content-z">
+  <div class="max-w-7xl mx-auto px-6">
+    <span class="section-label reveal">06 — Code Showcase</span>
+    <h2 class="reveal reveal-d1 mt-4 text-l1" style="font-size:clamp(2rem,5vw,3.75rem)">
+      Production patterns<br><span class="text-l4">I implement daily</span>
+    </h2>
+    <div class="grid lg:grid-cols-2 gap-6 mt-14">
+      <!-- Code Block 1: Spring Security Config -->
+      <div class="reveal reveal-d2 code-block">
+        <div class="code-chrome">
+          <span class="code-dot" style="background:#ff5f57"></span>
+          <span class="code-dot" style="background:#febc2e"></span>
+          <span class="code-dot" style="background:#28c840"></span>
+          <span class="text-l5 text-xs ml-2 font-mono">SecurityConfig.java</span>
+        </div>
+        <div class="code-content">
+          <span class="ann">@Configuration</span><br>
+          <span class="ann">@EnableWebSecurity</span><br>
+          <span class="kw">public class</span> <span class="cls">SecurityConfig</span> {<br><br>
+          &nbsp;&nbsp;<span class="ann">@Bean</span><br>
+          &nbsp;&nbsp;<span class="kw">public</span> <span class="cls">SecurityFilterChain</span> <span class="fn">filterChain</span>(<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="cls">HttpSecurity</span> http) <span class="kw">throws</span> <span class="cls">Exception</span> {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;http<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="fn">csrf</span>(<span class="cls">AbstractHttpConfigurer</span>::<span class="fn">disable</span>)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="fn">authorizeHttpRequests</span>(auth <span class="var">-></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;auth.<span class="fn">requestMatchers</span>(<span class="str">"/api/auth/**"</span>)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="fn">permitAll</span>()<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="fn">anyRequest</span>()<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="fn">authenticated</span>()<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> http.<span class="fn">build</span>();<br>
+          &nbsp;&nbsp;}<br>
+          }
+        </div>
+      </div>
+      <!-- Code Block 2: Service Test -->
+      <div class="reveal reveal-d3 code-block">
+        <div class="code-chrome">
+          <span class="code-dot" style="background:#ff5f57"></span>
+          <span class="code-dot" style="background:#febc2e"></span>
+          <span class="code-dot" style="background:#28c840"></span>
+          <span class="text-l5 text-xs ml-2 font-mono">AppointmentServiceTest.java</span>
+        </div>
+        <div class="code-content">
+          <span class="ann">@ExtendWith</span>(<span class="cls">MockitoExtension</span>.<span class="kw">class</span>)<br>
+          <span class="kw">class</span> <span class="cls">AppointmentServiceTest</span> {<br><br>
+          &nbsp;&nbsp;<span class="ann">@Mock</span><br>
+          &nbsp;&nbsp;<span class="kw">private</span> <span class="cls">AppointmentRepository</span> repo;<br><br>
+          &nbsp;&nbsp;<span class="ann">@InjectMocks</span><br>
+          &nbsp;&nbsp;<span class="kw">private</span> <span class="cls">AppointmentService</span> service;<br><br>
+          &nbsp;&nbsp;<span class="ann">@Test</span><br>
+          &nbsp;&nbsp;<span class="kw">void</span> <span class="fn">shouldScheduleAppointment</span>() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="cls">AppointmentDto</span> dto <span class="var">=</span> <span class="kw">new</span> <span class="cls">AppointmentDto</span>();<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;dto.<span class="fn">setDoctorId</span>(<span class="num">1L</span>);<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;dto.<span class="fn">setPatientId</span>(<span class="num">2L</span>);<br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="cls">Appointment</span> result <span class="var">=</span> service.<span class="fn">schedule</span>(dto);<br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">assertNotNull</span>(result);<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">verify</span>(repo).<span class="fn">save</span>(<span class="fn">any</span>());<br>
+          &nbsp;&nbsp;}<br>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-32 content-z">
+  <div class="max-w-7xl mx-auto px-6">
+    <span class="section-label reveal">07 — Get In Touch</span>
+    <h2 class="reveal reveal-d1 mt-4" style="font-size:clamp(2rem,5vw,3.75rem)">
+      <span class="text-l1" style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;line-height:1.1;letter-spacing:-0.02em">Let's build something</span><br>
+      <span class="gradient-text" style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;line-height:1.1;letter-spacing:-0.02em">great together</span>
+    </h2>
+    <p class="reveal reveal-d2 text-l3 mt-6 max-w-lg text-sm sm:text-base">
+      I'm actively seeking a Java Software Engineer internship and open to impactful, real-world engineering opportunities. Let's connect.
+    </p>
+    <div class="grid lg:grid-cols-2 gap-12 mt-12">
+      <!-- Form -->
+      <form id="contactForm" class="reveal reveal-d3 space-y-5">
+        <div>
+          <label class="form-label" for="name">Name *</label>
+          <input type="text" id="name" name="name" required placeholder="Your full name" class="form-input">
+        </div>
+        <div>
+          <label class="form-label" for="email">Email *</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com" class="form-input">
+        </div>
+        <div>
+          <label class="form-label" for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" class="form-input">
+        </div>
+        <div>
+          <label class="form-label" for="message">Message *</label>
+          <textarea id="message" name="message" required rows="5" placeholder="Tell me about your project or opportunity..." class="form-input resize-none"></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full sm:w-auto">
+          Send Message
+          <span class="iconify" data-icon="mdi:send" data-width="18"></span>
+        </button>
+      </form>
+      <!-- Quick Contact -->
+      <div class="reveal reveal-d4 space-y-6">
+        <p class="text-l4 text-xs font-mono uppercase tracking-widest">Quick Contact</p>
+        <div class="space-y-3">
+          <a href="mailto:ranjeet75504@gmail.com" class="btn-glass px-5 py-3 text-sm text-l2 flex items-center gap-3 w-full hover:text-white">
+            <span class="iconify text-accent" data-icon="mdi:email-outline" data-width="20"></span>
+            ranjeet75504@gmail.com
+          </a>
+          <a href="tel:+919990524227" class="btn-glass px-5 py-3 text-sm text-l2 flex items-center gap-3 w-full hover:text-white">
+            <span class="iconify text-accent" data-icon="mdi:phone-outline" data-width="20"></span>
+            +91 9990524227
+          </a>
+          <a href="https://github.com/ranjeetprajapati" target="_blank" rel="noopener" class="btn-glass px-5 py-3 text-sm text-l2 flex items-center gap-3 w-full hover:text-white">
+            <span class="iconify text-white" data-icon="mdi:github" data-width="20"></span>
+            github.com/ranjeetprajapati
+          </a>
+          <a href="https://linkedin.com/in/ranjeet-prajapati-286956394" target="_blank" rel="noopener" class="btn-glass px-5 py-3 text-sm text-l2 flex items-center gap-3 w-full hover:text-white">
+            <span class="iconify text-blue-400" data-icon="mdi:linkedin" data-width="20"></span>
+            LinkedIn Profile
+          </a>
+          <a href="https://my-portfolio-liard-omega-92ea0rn067.vercel.app" target="_blank" rel="noopener" class="btn-glass px-5 py-3 text-sm text-l2 flex items-center gap-3 w-full hover:text-white">
+            <span class="iconify text-green-400" data-icon="mdi:web" data-width="20"></span>
+            Portfolio Website
+          </a>
+        </div>
+        <div class="pt-4">
+          <p class="text-l4 text-xs font-mono uppercase tracking-widest mb-3">Location</p>
+          <p class="text-l3 text-sm flex items-center gap-2">
+            <span class="iconify text-accent" data-icon="mdi:map-marker-outline" data-width="18"></span>
+            Noida, Uttar Pradesh, India
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-white/5 py-12 content-z">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      <a href="#hero" class="text-l4 text-sm font-medium hover:text-white transition-colors">Ranjeet<span class="text-accent">.</span></a>
+      <p class="text-l5 text-xs">Crafted with ☕ and attention to detail. © 2024</p>
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse-dot"></span>
+        <span class="text-l4 text-xs">Open to opportunities</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast">
+  <span class="iconify text-green-400" data-icon="mdi:check-circle" data-width="22"></span>
+  <span class="text-green-400 text-sm font-medium">Message sent successfully!</span>
+</div>
+
+<script>
+// ─── Cursor Spotlight ───
+document.querySelectorAll('.card-spotlight').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+    card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+  });
+});
+
+// ─── Scroll Reveal ───
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '-50px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ─── Counter Animation ───
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      const duration = 2000;
+      const startTime = performance.now();
+      
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased);
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      
+      requestAnimationFrame(update);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+// ─── Nav Scroll Effect ───
+const navbar = document.getElementById('navbar');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  if (scrollY > 100) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+  lastScroll = scrollY;
+}, { passive: true });
+
+// ─── Active Nav Link ───
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link[data-section]');
+
+const activeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.section === id);
+      });
+    }
+  });
+}, { threshold: 0.3, rootMargin: '-100px 0px -50% 0px' });
+
+sections.forEach(section => activeObserver.observe(section));
+
+// ─── Mobile Menu ───
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+});
+
+// ─── Contact Form ───
+const contactForm = document.getElementById('contactForm');
+const toast = document.getElementById('toast');
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
+  let valid = true;
+
+  // Reset errors
+  [name, email, message].forEach(input => input.classList.remove('error'));
+
+  if (!name.value.trim()) { name.classList.add('error'); valid = false; }
+  if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { email.classList.add('error'); valid = false; }
+  if (!message.value.trim()) { message.classList.add('error'); valid = false; }
+
+  if (!valid) return;
+
+  // Show toast
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 5000);
+
+  // Reset form
+  contactForm.reset();
+});
+
+// Remove error state on input
+document.querySelectorAll('.form-input').forEach(input => {
+  input.addEventListener('input', () => input.classList.remove('error'));
+});
+</script>
+</body>
+</html>
